@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sneeuwklassen 2027 – Campus Neerpelt</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap">
+<style>
+:root{--bg:#f3f8fc;--surface:#fff;--ink:#0b2540;--mute:#4d6580;--line:#d6e4f0;--accent:#ff6b35;--ice:#1e88e5;--glass:rgba(255,255,255,.75);--shadow:0 10px 30px rgba(11,37,64,.1);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#07121f;--surface:#0e2237;--ink:#e8f1fa;--mute:#93aac2;--line:#1d3a57;--glass:rgba(10,24,40,.75);--shadow:0 10px 30px rgba(0,0,0,.4);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#07121f;--surface:#0e2237;--ink:#e8f1fa;--mute:#93aac2;--line:#1d3a57;--glass:rgba(10,24,40,.75);--shadow:0 10px 30px rgba(0,0,0,.4);color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 Outfit,system-ui,sans-serif;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--glass);backdrop-filter:blur(14px);z-index:60}
+a{color:var(--ice);text-decoration:none}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--glass);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav{max-width:1100px;margin:auto;display:flex;align-items:center;gap:6px;padding:10px 20px;overflow-x:auto}
+.logo{font-weight:800;margin-right:auto;white-space:nowrap;color:var(--ink)}
+.logo b{color:var(--accent)}
+nav a.l{color:var(--mute);padding:8px 14px;border-radius:99px;white-space:nowrap;font-weight:600;font-size:15px;transition:.25s}
+nav a.l:hover{color:var(--ink)}
+nav a.l.on{background:var(--ink);color:var(--bg)}
+.page{display:none}
+.page.show{display:block;animation:pg .6s cubic-bezier(.2,.8,.2,1)}
+@keyframes pg{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.hero{position:relative;min-height:88vh;display:grid;place-items:center;text-align:center;color:#fff;overflow:hidden;background:linear-gradient(180deg,#061a33 0%,#12467a 55%,#f08a5d 100%)}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%}
+.mt{position:absolute;left:-5%;width:110%;bottom:-2px;transition:transform .2s linear}
+.hero .in{position:relative;z-index:2;padding:0 20px 120px}
+.hero h1{font-size:clamp(46px,10vw,120px);line-height:1;margin:.1em 0;font-weight:800;letter-spacing:-.03em}
+.hero h1 span{display:inline-block;opacity:0;transform:translateY(60px) rotate(6deg);animation:up .9s cubic-bezier(.2,.9,.2,1) forwards}
+@keyframes up{to{opacity:1;transform:none}}
+.eyebrow{letter-spacing:.3em;text-transform:uppercase;font-size:13px;opacity:.85;animation:fd 1s .1s both}
+.sub{max-width:620px;margin:18px auto 28px;font-size:19px;animation:fd 1s 1s both}
+@keyframes fd{from{opacity:0;transform:translateY(14px)}to{opacity:1}}
+.chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;animation:fd 1s 1.2s both}
+.chip{padding:7px 16px;border:1px solid rgba(255,255,255,.4);border-radius:99px;backdrop-filter:blur(6px);background:rgba(255,255,255,.12);font-size:14px}
+.wrap{max-width:1100px;margin:auto;padding:70px 20px}
+h2{font-size:clamp(30px,5vw,48px);line-height:1.1;margin:0 0 20px;letter-spacing:-.02em}
+h3{margin:0 0 6px;font-size:22px}
+.lead{font-size:20px;color:var(--mute);max-width:720px}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin-top:34px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:var(--shadow);transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-8px) scale(1.01)}
+a.card{color:var(--ink);display:block}
+.card .ic{font-size:36px;display:block;margin-bottom:10px;transition:transform .4s}
+.card:hover .ic{transform:scale(1.25) rotate(-8deg)}
+.card p{margin:0;color:var(--mute)}
+.arrow{display:inline-block;margin-top:14px;color:var(--accent);font-weight:600;transition:transform .3s}
+.card:hover .arrow{transform:translateX(8px)}
+.rv{opacity:0;transform:translateY(40px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}
+.rv.v{opacity:1;transform:none}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:14px 28px;border-radius:99px;font-weight:600;box-shadow:0 8px 24px rgba(255,107,53,.4);transition:.3s;border:0;font:inherit;font-weight:600;cursor:pointer}
+.btn:hover{transform:translateY(-3px) scale(1.04)}
+.phead{padding:70px 20px 40px;background:linear-gradient(135deg,#0b2d52,#1e88e5);color:#fff;text-align:center;position:relative;overflow:hidden}
+.phead h1{margin:0;font-size:clamp(36px,7vw,70px);letter-spacing:-.02em}
+.phead::after{content:"❄";position:absolute;right:6%;top:10%;font-size:120px;opacity:.12;animation:spin 30s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.links{list-style:none;padding:0;margin:20px 0;display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.links a{display:flex;justify-content:space-between;padding:14px 18px;background:var(--surface);border:1px solid var(--line);border-radius:14px;color:var(--ink);font-weight:600;transition:.3s}
+.links a:hover{border-color:var(--accent);transform:translateX(6px)}
+.links a::after{content:"↗";color:var(--accent)}
+.hotel{min-height:210px;color:#fff;border:0;display:flex;flex-direction:column;justify-content:flex-end}
+.hotel::before{content:"";position:absolute;inset:0;background:var(--g);z-index:0;transition:transform .6s}
+.hotel:hover::before{transform:scale(1.15)}
+.hotel>*{position:relative;z-index:1;color:#fff}
+.hotel p{opacity:.9}
+.alert{background:linear-gradient(135deg,#ff6b35,#d6246e);color:#fff;border-radius:24px;padding:34px;box-shadow:0 14px 40px rgba(214,36,110,.35);animation:pulse 3s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.015)}}
+.alert h2{margin-bottom:12px}
+.alert ul{margin:0 0 14px;padding-left:22px;font-size:20px}
+.alert em{font-style:normal;font-weight:800;background:rgba(0,0,0,.25);padding:6px 14px;border-radius:99px;display:inline-block}
+.prog{position:sticky;top:calc(env(safe-area-inset-top,0px) + 58px);z-index:5;margin:28px 0 8px;height:10px;background:var(--line);border-radius:99px;overflow:hidden}
+.prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--ice),var(--accent));transition:width .5s cubic-bezier(.2,.8,.2,1)}
+.pl{font-size:14px;color:var(--mute);margin-bottom:10px}
+.cl{list-style:none;padding:0;margin:0;display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.cl label{display:flex;gap:14px;align-items:center;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:14px;cursor:pointer;transition:.3s}
+.cl label:hover{transform:translateX(5px)}
+.cl input{appearance:none;width:24px;height:24px;border:2px solid var(--mute);border-radius:8px;flex:none;display:grid;place-items:center;transition:.3s;margin:0}
+.cl input::after{content:"✓";color:#fff;font-weight:800;transform:scale(0);transition:transform .35s cubic-bezier(.3,1.8,.5,1)}
+.cl input:checked{background:var(--accent);border-color:var(--accent)}
+.cl input:checked::after{transform:scale(1)}
+.cl input:checked~span{text-decoration:line-through;opacity:.5}
+.tag{margin-left:auto;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:var(--accent);color:#fff;padding:3px 9px;border-radius:99px}
+.vid{aspect-ratio:16/9;border-radius:18px;overflow:hidden;position:relative;background:linear-gradient(135deg,#0b2d52,#1e88e5);display:grid;place-items:center;cursor:pointer;color:#fff;border:0;width:100%;font:inherit}
+.vid .pl2{width:68px;height:68px;border-radius:50%;background:var(--accent);display:grid;place-items:center;font-size:26px;transition:.35s;box-shadow:0 0 0 0 rgba(255,107,53,.6);animation:ring 2.2s infinite}
+@keyframes ring{70%{box-shadow:0 0 0 22px rgba(255,107,53,0)}}
+.vid:hover .pl2{transform:scale(1.18)}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vc{padding:0;overflow:hidden}
+.vc .t{padding:16px 22px 20px}
+footer{text-align:center;padding:40px 20px 60px;color:var(--mute);font-size:15px;border-top:1px solid var(--line)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.hero h1 span,.eyebrow,.sub,.chips{opacity:1!important;transform:none!important}}
+</style>
+</head>
+<body>
+<header><nav>
+<a class="logo" href="#home">❄ Sneeuwklassen <b>Neerpelt</b></a>
+<a class="l" href="#home">Homepage</a><a class="l" href="#peio">Peio – het skidorp</a><a class="l" href="#vertrek">Informatiebrief</a><a class="l" href="#video">Instructievideo’s</a><a class="l" href="#foto">Foto’s en video’s</a>
+</nav></header>
+
+<main>
+<section class="page" id="home">
+<div class="hero">
+<canvas id="snow"></canvas>
+<svg class="mt" id="m1" viewBox="0 0 1440 400" preserveAspectRatio="none" height="300"><path fill="#1c4f86" opacity=".55" d="M0 400V220l130-90 120 80 160-150 170 160 130-70 190 120 150-110 200 140 190-90v190z"/></svg>
+<svg class="mt" id="m2" viewBox="0 0 1440 300" preserveAspectRatio="none" height="230"><path fill="#0b2d52" d="M0 300V160l100-50 150 90 180-130 170 110 150-80 200 120 160-100 230 110v130z"/></svg>
+<svg class="mt" id="m3" viewBox="0 0 1440 200" preserveAspectRatio="none" height="140"><path fill="#f3f8fc" d="M0 200V120c200-60 400 20 700-10s500-40 740 20v70z"/></svg>
+<div class="in">
+<div class="eyebrow">Campus Neerpelt · Derde jaar</div>
+<h1 id="ttl" aria-label="Sneeuwklassen 2027"></h1>
+<p class="sub">Opnieuw richting Peio in Italië, samen met reisorganisatie SnowCompanion.</p>
+<div class="chips"><span class="chip">🏔 Peio, Italië</span><span class="chip">🎿 Derde jaar</span><span class="chip">🤝 SnowCompanion</span></div>
+</div></div>
+<div class="wrap">
+<div class="rv"><h2>Welkom op de website van sneeuwklassen 2027</h2>
+<p class="lead">Na de geslaagde editie van de voorbije jaren trekken we met de leerlingen van het derde jaar opnieuw richting Peio in Italië! Samen met de reisorganisatie <a href="https://snowcompanion.be/" target="_blank" rel="noopener">SnowCompanion</a> zetten we weer ons beste beentje voor om onze leerlingen een onvergetelijke ervaring te geven!</p>
+<p class="lead">Op deze website vinden jullie sfeerbeelden van onze activiteiten in Italië, alsook sfeerbeelden van de leerlingen die het thuisprogramma volgen. Veel plezier!</p></div>
+<div class="grid">
+<a class="card rv" href="#peio"><span class="ic">🏘</span><h3>Peio – het skidorp</h3><p>Praktische informatie over het dorpje Peio en de hotels.</p><span class="arrow">Ontdek →</span></a>
+<a class="card rv" href="#vertrek"><span class="ic">🧳</span><h3>Informatiebrief voor vertrek</h3><p>Wat neem je mee in je koffer en handbagage?</p><span class="arrow">Bekijk →</span></a>
+<a class="card rv" href="#video"><span class="ic">🎬</span><h3>Instructievideo’s</h3><p>De beginners kunnen zo al eens kijken hoe je best met je materiaal omgaat!</p><span class="arrow">Kijk →</span></a>
+<a class="card rv" href="#foto"><span class="ic">📸</span><h3>Foto’s en video’s</h3><p>Na afloop van de sneeuwklassen vind je hier de foto’s van alle activiteiten.</p><span class="arrow">Bekijk →</span></a>
+</div>
+<div class="rv" style="margin-top:50px;display:flex;gap:16px;flex-wrap:wrap;align-items:center"><span style="color:var(--mute)">In samenwerking met</span><a class="btn" href="https://snowcompanion.be/" target="_blank" rel="noopener">SnowCompanion</a><span style="color:var(--mute)">Volg het skigebied via</span><a class="btn" href="https://www.instagram.com/skipejo/" target="_blank" rel="noopener">Instagram</a></div>
+</div>
+</section>
+
+<section class="page" id="peio">
+<div class="phead"><h1>Peio – het ski dorp</h1></div>
+<div class="wrap">
+<div class="rv"><h2>Sneeuwklassen Italië</h2>
+<p class="lead">Italië biedt perfect geprepareerde pistes, geweldig eten en vele uren zonneschijn!</p>
+<p class="lead">Val di Sole, “Dal van de zon”, is zijn naam zeker waardig. Het sneeuwzekere skigebied is ideaal voor zowel beginnende als gevorderde skiërs. Geniet hier van de prachtige pistes en de gezellige restaurants.</p>
+<p class="lead">Wil je graag meer info over Peio, een kijkje nemen via de webcam, nieuwsgierig naar de weersomstandigheden en sneeuwhoogte? Dan vind je hier zeker een nuttige link:</p></div>
+<ul class="links rv">
+<li><a href="https://www.valdisole.net/EN/homepage/" target="_blank" rel="noopener">Website Val di Sole</a></li>
+<li><a href="https://www.visittrentino.info/nl" target="_blank" rel="noopener">Website Trentino</a></li>
+<li><a href="https://www.visittrentino.info/nl/ontdek-trentino/toeristische-plaatsen/peio_md_207" target="_blank" rel="noopener">Informatie Peio</a></li>
+<li><a href="https://www.google.com/maps/place/38024+Peio,+Trente,+Itali%C3%AB/@46.3693843,10.6555006,14.5z/data=!4m5!3m4!1s0x4782f8d3ef0962ad:0x6a77f195322a4bd9!8m2!3d46.3837162!4d10.6793795" target="_blank" rel="noopener">Google Maps – Peio</a></li>
+<li><a href="https://nl.bergfex.com/pejo-val-di-sole/webcams/" target="_blank" rel="noopener">Webcams Peio</a></li>
+<li><a href="https://nl.bergfex.com/pejo-val-di-sole/wetter/" target="_blank" rel="noopener">Weersvoorspelling Peio</a></li>
+<li><a href="https://www.snowplaza.be/italie/val-di-sole/pejo/sneeuwhoogte/" target="_blank" rel="noopener">Sneeuwhoogte Peio</a></li>
+</ul>
+<h2 class="rv" style="margin-top:60px">Onze hotels</h2>
+<div class="grid" id="hotels"></div>
+</div>
+</section>
+
+<section class="page" id="vertrek">
+<div class="phead"><h1>Informatie voor vertrek</h1></div>
+<div class="wrap">
+<div class="alert rv"><h2>BELANGRIJK!</h2><ul><li>Identiteitskaart (wordt gevraagd te tonen bij vertrek)</li><li>Europese ziekteverzekeringskaart</li></ul><em>Eén van de 2 niet in orde = thuisblijven…</em></div>
+<div class="prog"><i id="bar"></i></div><div class="pl" id="pl"></div>
+<h2 class="rv" style="margin-top:30px">🧳 Koffer <small style="font-size:16px;color:var(--mute);font-weight:400">(niet bereikbaar tijdens rit)</small></h2>
+<ul class="cl" id="koffer"></ul>
+<h2 class="rv" style="margin-top:56px">🎒 Handbagage <small style="font-size:16px;color:var(--mute);font-weight:400">(mee op de bus)</small></h2>
+<ul class="cl" id="hand"></ul>
+<h2 class="rv" style="margin-top:56px">✨ Ook handig!</h2>
+<ul class="cl" id="handig"></ul>
+</div>
+</section>
+
+<section class="page" id="video">
+<div class="phead"><h1>Instructievideo’s</h1></div>
+<div class="wrap"><p class="lead rv">De beginners kunnen zo al eens kijken hoe je best met je materiaal omgaat!</p><div class="grid" id="vids"></div></div>
+</section>
+
+<section class="page" id="foto">
+<div class="phead"><h1>Foto’s en video’s</h1></div>
+<div class="wrap" style="text-align:center"><p class="lead rv" style="margin:0 auto 30px">Hier kan je na afloop van de sneeuwklassen de foto’s van alle activiteiten raadplegen.</p>
+<a class="btn rv" href="https://photos.app.goo.gl/2K7zHRKX5bi9JNti6" target="_blank" rel="noopener">📸 Klik hier voor het fotoalbum</a></div>
+</section>
+</main>
+<footer>Campus Neerpelt · Sneeuwklassen 2027 · in samenwerking met <a href="https://snowcompanion.be/" target="_blank" rel="noopener">SnowCompanion</a></footer>
+
+<script>
+const H=[["Hotel Europa","https://www.hoteleuropa.tn.it/","#0b3d6e,#1e88e5"],["Hotel Zanella","https://www.hotelzanella.com/","#4a1d6b,#c0398f"],["Hotel Sporting","https://www.albergosporting.it/","#0a5c4f,#2bb39a"],["Hotel Aurora","https://aurorahotel.info/","#7a2a12,#ff6b35"]];
+document.getElementById("hotels").innerHTML=H.map(h=>`<a class="card hotel rv" style="--g:linear-gradient(135deg,${h[2].split(",")[0]},${h[2].split(",")[1]})" href="${h[1]}" target="_blank" rel="noopener"><h3>${h[0]}</h3><p>Uitvalbasis voor onze klassen</p><span class="arrow" style="color:#fff">Website →</span></a>`).join("");
+const K=["een waterdichte skibroek","een winterjas die waterdicht en natuurlijk ook warm genoeg is (skivest)","twee dikke truien","skisokken","één stevige, warme lange broek en één reservebroek","één paar stevige schoenen (liefst hoge); skischoenen zijn voorzien","muts waarmee de oren kunnen bedekt worden (verplicht)","waterdichte handschoenen (verplicht)","sjaal","voldoende ondergoed (broekjes, hemdjes)","warme lange kousen voor in de wandelschoenen of skischoenen","zakdoeken","pyjama of nachtkleed","zakje voor vuil linnen","handdoeken en washandjes (1 basispakket per persoon wordt door hotel voorzien)","toiletgerief: zeep, kam, tandpasta en tandenborstel","huispantoffels (verplicht)","zonnebril (verplicht) en/of skibril","crème tegen hoogtezon, lippenbalsem, compeed…","GSM = EIGEN RISICO!","zakgeld volgens afspraak (35 euro)","GALA kledij (voor de avondactiviteit)","foute outfit (voor de avondactiviteit)","gezelschapsspelletje (voor de avondactiviteit)"];
+const B=["lunchpakket (ontbijt)","skisokken","muts","handschoenen","kleingeld (onderweg stoppen we en hiermee kan je een toiletbezoek betalen)"];
+const G=["dekentje & kussen voor de bus (2 nachtritten)","persoonlijke medicatie","gezelschapsspelletjes, kaarten, leesboek (kan ook in koffer)"];
+let store={};try{store=JSON.parse(localStorage.getItem("snk27")||"{}")}catch(e){}
+function list(id,arr){document.getElementById(id).innerHTML=arr.map((t,i)=>{const v=t.endsWith("(verplicht)");const k=id+i;return `<li class="rv"><label><input type="checkbox" data-k="${k}" ${store[k]?"checked":""}><span>${v?t.replace(" (verplicht)",""):t}</span>${v?'<b class="tag">verplicht</b>':""}</label></li>`}).join("")}
+list("koffer",K);list("hand",B);list("handig",G);
+function prog(){const c=[...document.querySelectorAll(".cl input")];const d=c.filter(x=>x.checked).length;document.getElementById("bar").style.width=(100*d/c.length)+"%";document.getElementById("pl").textContent=d+" van "+c.length+" afgevinkt"+(d==c.length?" 🎉 klaar voor vertrek!":"")}
+document.addEventListener("change",e=>{const k=e.target.dataset&&e.target.dataset.k;if(!k)return;store[k]=e.target.checked;try{localStorage.setItem("snk27",JSON.stringify(store))}catch(x){}prog()});prog();
+const V=[["Waarom een skihelm dragen?","WN6dHXSCMvk"],["Hoe skischoenen aantrekken?","WCwLR60fknk"],["Hoe ski’s dragen?","sJvS8d9NA4o"],["Hoe ski’s aandoen?","307PRCevGi0"],["Hoe lopen op ski’s?","XvTHa924Kho"],["Lussen van stokken aandoen?","BNXQ8dtEKtg"]];
+document.getElementById("vids").innerHTML=V.map(v=>`<div class="card vc rv"><button class="vid" data-id="${v[1]}" aria-label="Speel ${v[0]}"><span class="pl2">▶</span></button><div class="t"><h3>${v[0]}</h3><a href="https://www.youtube.com/watch?v=${v[1]}" target="_blank" rel="noopener">Open op YouTube ↗</a></div></div>`).join("");
+document.addEventListener("click",e=>{const b=e.target.closest(".vid");if(!b)return;b.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${b.dataset.id}?autoplay=1" allow="autoplay;fullscreen" allowfullscreen></iframe>`});
+document.getElementById("ttl").innerHTML="Sneeuwklassen 2027".split("").map((c,i)=>`<span style="animation-delay:${.15+i*.045}s">${c==" "?"&nbsp;":c}</span>`).join("");
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("v");io.unobserve(e.target)}}),{threshold:.12});
+function route(){const id=(location.hash||"#home").slice(1);const p=document.getElementById(id)||document.getElementById("home");document.querySelectorAll(".page").forEach(s=>s.classList.toggle("show",s===p));document.querySelectorAll("nav a.l").forEach(a=>a.classList.toggle("on",a.getAttribute("href")=="#"+p.id));window.scrollTo(0,0);p.querySelectorAll(".rv").forEach((el,i)=>{el.style.transitionDelay=Math.min(i%4,3)*.08+"s";io.observe(el)})}
+addEventListener("hashchange",route);route();
+const cv=document.getElementById("snow"),cx=cv.getContext("2d");let W,Hh,F=[];
+function rs(){W=cv.width=cv.offsetWidth;Hh=cv.height=cv.offsetHeight}
+addEventListener("resize",rs);rs();
+for(let i=0;i<110;i++)F.push({x:Math.random()*2000,y:Math.random()*1000,r:Math.random()*2.8+.8,s:Math.random()*.9+.4,d:Math.random()*6});
+let t=0;(function tick(){t+=.01;cx.clearRect(0,0,W,Hh);cx.fillStyle="rgba(255,255,255,.85)";F.forEach(f=>{f.y+=f.s;f.x+=Math.sin(t+f.d)*.5;if(f.y>Hh){f.y=-5;f.x=Math.random()*W}cx.beginPath();cx.arc(f.x%W,f.y,f.r,0,7);cx.fill()});requestAnimationFrame(tick)})();
+addEventListener("scroll",()=>{const y=scrollY;[["m1",.12],["m2",.06]].forEach(([i,k])=>document.getElementById(i).style.transform=`translateY(${y*k}px)`)},{passive:true});
+</script>
+</body>
+</html>
